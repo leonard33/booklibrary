@@ -1,12 +1,10 @@
-
-// create book class
 import { DateTime } from './modules/luxon.js';
 import Book from './modules/book.js';
 import { addTolocalStorage, removefromlocalstorage } from './modules/localstorage.js';
 // UI class
 
 class UI {
-    static addBookToList(book) {
+  static addBookToList(book) {
     const list = document.querySelector('#t-body');
     const row = document.createElement('tr');
     row.classList.add('bookdata');
@@ -16,10 +14,8 @@ class UI {
         <td><a href"#" class="btn btn-danger delete" id="delete" ><i class="fa fa-trash"></i></a></td>
         `;
     list.appendChild(row);
-        
-        // console.log( `${book.title} by ${book.author}`);
-       
     }
+
     static displayBooks = () => {
         return getbooks()
         }
