@@ -14,11 +14,11 @@ class UI {
         <td><a href"#" class="btn btn-danger delete" id="delete" ><i class="fa fa-trash"></i></a></td>
         `;
     list.appendChild(row);
-    }
+ }
 
     static displayBooks = () => {
-        return getbooks()
-        }
+      return getbooks();
+    }
 }
 
 // Event: Display Books
@@ -28,64 +28,63 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks);
 // Event: create a Book
 const createBook = document.querySelector('#form-1');
 createBook.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if(createBook.title.value === '' || createBook.author.value === '') {
-        alert('Please fill in all fields');
-    } else {
+  e.preventDefault();
+  if (createBook.title.value === '' || createBook.author.value === '') {
+    alert('Please fill in all fields');
+  } else {
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
 
-    //console.log(title, author);
+    // console.log(title, author);
     const book = new Book(title, author);
-    console.log(book);
-    
-    document.querySelector('#title').value= "";
-    document.querySelector('#author').value= "";
-   
+    // console.log(book);
+
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+
     UI.addBookToList(book);
 
     addTolocalStorage(book);
-    }
+  }
 
 });
 
-
+// Event: delete a Book
 const deleteBook = document.querySelector('#t-body');
 deleteBook.addEventListener('click', (e) => {
-    e.preventDefault();
-    if(e.target.classList.contains('delete')){
-        e.target.parentElement.parentElement.remove();
-        removefromlocalstorage(e.target.parentElement.parentElement);
-    }
+  e.preventDefault();
+  if (e.target.classList.contains('delete')) {
+    e.target.parentElement.parentElement.remove();
+    removefromlocalstorage(e.target.parentElement.parentElement);
+  }
 });
-//window.deleteBook = deleteBook;
+// window.deleteBook = deleteBook;  making windows global
 // get books from local storage
- const getbooks = () => {
-    let books;
-    if (localStorage.getItem('books') === null) {
-        books = [];
-    } else {
-        books = JSON.parse(localStorage.getItem('books'));
-    }
-    books.forEach((book2) => {
-        const list = document.querySelector('#t-body');
-        const row = document.createElement('tr');
-        row.classList.add('bookdata');
-        row.innerHTML = `
+const getbooks = () => {
+  let books;
+  if (localStorage.getItem('books') === null) {
+    books = [];
+  } else {
+    books = JSON.parse(localStorage.getItem('books'));
+  }
+  books.forEach((book2) => {
+    const list = document.querySelector('#t-body');
+    const row = document.createElement('tr');
+    row.classList.add('bookdata');
+    row.innerHTML = `
         <td>${book2.title}</td>
         <td>${book2.author}</td>
         <td><a href"#" class="btn btn-danger delete" id="delete" ><i class="fa fa-trash"></i></a></td>
         `;
-        list.appendChild(row);
-        
-    });
-    
-    return books;
-}
-//window.getbooks = getbooks;
+    list.appendChild(row);
+  });
+
+  return books;
+};
+// window.getbooks = getbooks;
 // add to local storage
 
- 
+
 
 const bookListLink = document.getElementById('bookListLink');
 const addBookLink = document.getElementById('addBookLink');
@@ -124,4 +123,3 @@ const currentTime = () => {
   dateTime.innerHTML = currentDateTime;
 };
 setInterval(currentTime, 500);
-
