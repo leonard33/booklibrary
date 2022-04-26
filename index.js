@@ -16,8 +16,7 @@ class UI {
     list.appendChild(row);
   }
 
-    static displayBooks = () => { return getbooks();}
-    
+    static displayBooks = () =>  getbooks(); 
 }
 
 // Event: Display Books
@@ -44,7 +43,6 @@ createBook.addEventListener('submit', (e) => {
 
     addTolocalStorage(book);
   }
-
 });
 
 // Event: delete a Book
