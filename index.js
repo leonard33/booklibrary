@@ -14,11 +14,10 @@ class UI {
         <td><a href"#" class="btn btn-danger delete" id="delete" ><i class="fa fa-trash"></i></a></td>
         `;
     list.appendChild(row);
- }
+  }
 
-    static displayBooks = () => {
-      return getbooks();
-    }
+    static displayBooks = () => { return getbooks();}
+    
 }
 
 // Event: Display Books
@@ -82,8 +81,6 @@ const getbooks = () => {
 };
 // window.getbooks = getbooks;
 // add to local storage
-
-
 
 const bookListLink = document.getElementById('bookListLink');
 const addBookLink = document.getElementById('addBookLink');
