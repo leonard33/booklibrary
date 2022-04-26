@@ -20,13 +20,18 @@
     text-decoration: none;
 }
 
+.date-time {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .container {
-    display: flex;
-    flex-direction: column ;
+  display: flex;
+  flex-direction: column ;
 }
 
 fa {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 nav {
