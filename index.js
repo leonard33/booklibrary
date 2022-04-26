@@ -22,7 +22,6 @@ class UI {
 }
 
 // Event: Display Books
-
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // Event: create a Book
