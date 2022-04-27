@@ -16,7 +16,7 @@ class UI {
     list.appendChild(row);
   }
 
-    static displayBooks = () =>  getbooks(); 
+    static displayBooks = () => getbooks();
 }
 
 // Event: Display Books
