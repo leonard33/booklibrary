@@ -1,0 +1,97 @@
+#form-1 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.25em, rgba(90, 125, 188, 0.05) 0 0.25em 1em;
+}
+
+#form-1 h2 {
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.logo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.date-time {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -20px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  padding: 5px;
+  border-right: 2px solid black;
+  display: block;
+}
+
+.contact-items > li {
+  border: 0;
+}
+
+.nav-list li:nth-child(3) {
+  border: none;
+}
+
+.nav-list li a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-list > li > a:active {
+  color: teal !important;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-top: 1px solid black;
+  box-shadow: rgba(17, 17, 26, 0.1) 0 0 16px;
+  padding: 15px;
+}
